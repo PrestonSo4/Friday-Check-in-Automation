@@ -18,7 +18,7 @@ def moveClick(x,y, time):
     pClick()
 def sendText(xpath, text):
     import time
-    time.sleep(1)
+    time.sleep(1.5)
     driver.find_element_by_xpath(xpath).send_keys(text)
 def zoom(iterations, symbol):
     p.keyDown('ctrl')
@@ -28,9 +28,9 @@ def zoom(iterations, symbol):
 def clickImage(file, con):
     import time
     time.sleep(1)
-    imageX, imageY = p.locateCenterOnScreen(file)
+    imageX, imageY = p.locateCenterOnScreen(file, confidence=con)
     p.moveTo(imageX,imageY)
-    p.click()
+    pClick()
     time.sleep(1)
     
 driver = webdriver.Chrome()
@@ -40,7 +40,7 @@ moveClick(1248,450,.5)
 sendText('//*[@id="ctl00_MainContent_username"]', un)
 sendText('//*[@id="ctl00_MainContent_password"]', pw)
 driver.find_element_by_xpath('//*[@id="ctl00_MainContent_Submit1"]').click()
-clickImage('Grade_Book_Button.png',0.9)
+clickImage('Grade_Book_Button.png',0.7)
 zoom(2, '-')
 time.sleep(2)
 loc = p.locateOnScreen('Grades.png', confidence=0.6) #I'm using the locate image function so that the coords wont have to change depending on screensize
@@ -59,10 +59,14 @@ p.drag(513,581, 1, button='left') #Dragging to the specified screenshot size
 driver.get('https://bsd405.sharepoint.com/:o:/r/sites/Section_df6688a0-c5d8-4d46-9b97-ccca24375f14/_layouts/15/Doc.aspx?sourcedoc=%7BEB5E2917-A691-40E9-8E8B-0A2CDCA5030C%7D&file=2020-FY-P7-Advisory%203%20Notebook&action=edit&mobileredirect=true&wdorigin=Sharepoint&RootFolder=%2Fsites%2FSection_df6688a0-c5d8-4d46-9b97-ccca24375f14%2FSiteAssets%2F2020-FY-P7-Advisory%203%20Notebook&web=1&ct=1617479094686&wdOrigin=OFFICECOM-WEB.START.MRU&cid=2bfb33b6-e868-42dc-9703-cd714cd75f18')
 time.sleep(1)
 sendText('//*[@id="i0116"]', email)
-clickImage('Next.png', 0.6)
+clickImage('Next.png', 0.7)
 sendText('//*[@id="i0118"]', pw)
-clickImage('Sign_in.png',0.9)
-clickImage('Yes.png', 0.8)
+clickImage('Sign_in.png',0.7)
+time.sleep(0.5)
+pClick()
+time.sleep(10)
+clickImage('Friday_Check_in_Tab.png', 0.7)
+clickImage('So_Preston_D_(Student)_Tab.png', 0.7)
 """
 --LAYOUT--
 
