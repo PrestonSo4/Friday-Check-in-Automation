@@ -19,7 +19,7 @@ def moveClick(x,y, time):
     pClick()
 def sendText(xpath, text):
     import time
-    time.sleep(1.5)
+    time.sleep(1)
     driver.find_element_by_xpath(xpath).send_keys(text)
 def zoom(iterations, symbol):
     p.keyDown('ctrl')
@@ -69,9 +69,16 @@ time.sleep(10)
 clickImage('So_ Preston_D_(Student)_Tab.png', 0.7)
 clickImage('Friday_Check_in_Tab.png', 0.7)
 time.sleep(3)
-clickImage('2021-04-09.png', 1)
+clickImage('2021-04-09.png', 0.98)
+time.sleep(2)
+clickImage('Grade_Landmark.png', 0.98)
+p.move(-40, 40)
+p.doubleClick()
+p.keyDown('ctrl')
+p.press('v')
+p.keyUp('ctrl')
 print('All Done!')
-time.sleep(5)
+time.sleep(10)
 driver.close()
 """
 --LAYOUT--
