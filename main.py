@@ -5,8 +5,7 @@ un = '' #Use this for ease of access. If you just want to run the code faster
 un = input('Enter your username for synergy: ')
 pw = '' #Use this for ease of access. If you just want to run the code faster
 pw = getpass('Enter your password for synergy:')
-email = '' #Use this for ease of access. If you just want to run the code faster
-email = input('Enter your email for Microsoft: ')
+email = un + '@bsd405.org'
 #! I suggest assign the username and email but not password !#
 def pClick(): 
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
@@ -26,10 +25,10 @@ def zoom(iterations, symbol):
     for i in range(iterations):
         p.press(symbol)
     p.keyUp('ctrl')
-def clickImage(file, confidence):
+def clickImage(file, con):
     import time
     time.sleep(1)
-    image = p.locateOnScreen(file, confidence = confidence)
+    image = p.locateOnScreen(file, confidence = con)
     imageX, imageY = p.center(image)
     p.click(imageX, imageY)
     time.sleep(1)
