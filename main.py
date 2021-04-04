@@ -2,8 +2,8 @@ import selenium, pyautogui as p, time, keyboard, win32api, win32con
 from selenium import webdriver
 from datetime import date
 from getpass import getpass
-un = '' #Use this for ease of access. If you just want to run the code faster
-un = input('Enter your username for synergy: ')
+un = 's-sop' #Use this for ease of access. If you just want to run the code faster
+#un = input('Enter your username for synergy: ')
 pw = '' #Use this for ease of access. If you just want to run the code faster
 pw = getpass('Enter your password for synergy:')
 email = un + '@bsd405.org'
@@ -68,7 +68,11 @@ pClick()
 time.sleep(10)
 clickImage('So_ Preston_D_(Student)_Tab.png', 0.7)
 clickImage('Friday_Check_in_Tab.png', 0.7)
-
+time.sleep(3)
+clickImage('2021-04-09.png', 1)
+print('All Done!')
+time.sleep(5)
+driver.close()
 """
 --LAYOUT--
 
