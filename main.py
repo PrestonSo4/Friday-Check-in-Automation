@@ -57,6 +57,9 @@ p.drag(513,581, 1, button='left') #Dragging to the specified screenshot size
 #screenshot coords: move right - 513,move down - 581
 driver.get('https://bsd405.sharepoint.com/:o:/r/sites/Section_df6688a0-c5d8-4d46-9b97-ccca24375f14/_layouts/15/Doc.aspx?sourcedoc=%7BEB5E2917-A691-40E9-8E8B-0A2CDCA5030C%7D&file=2020-FY-P7-Advisory%203%20Notebook&action=edit&mobileredirect=true&wdorigin=Sharepoint&RootFolder=%2Fsites%2FSection_df6688a0-c5d8-4d46-9b97-ccca24375f14%2FSiteAssets%2F2020-FY-P7-Advisory%203%20Notebook&web=1&ct=1617479094686&wdOrigin=OFFICECOM-WEB.START.MRU&cid=2bfb33b6-e868-42dc-9703-cd714cd75f18')
 sendText('//*[@id="i0116"]', email)
+clickImage('Next_Sign_in_Button.png')
+sendText('//*[@id="i0118"]', pw)
+p.click()
 """
 --LAYOUT--
 
