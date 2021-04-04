@@ -1,5 +1,6 @@
 import selenium, pyautogui as p, time, keyboard, win32api, win32con
 from selenium import webdriver
+from datetime import date
 from getpass import getpass
 un = '' #Use this for ease of access. If you just want to run the code faster
 un = input('Enter your username for synergy: ')
@@ -65,8 +66,9 @@ clickImage('Sign_in.png',0.7)
 time.sleep(0.5)
 pClick()
 time.sleep(10)
+clickImage('So_ Preston_D_(Student)_Tab.png', 0.7)
 clickImage('Friday_Check_in_Tab.png', 0.7)
-clickImage('So_Preston_D_(Student)_Tab.png', 0.7)
+
 """
 --LAYOUT--
 
@@ -79,11 +81,11 @@ Zooms out to 80% Zoom ✔
 Presses keys: 'CTRL+SHIFT+S' ✔
 Takes screenshot at specific coords (I have to get pyautogui to hold mouse down) ✔
 Goes to: https://bsd405.sharepoint.com/:o:/r/sites/Section_df6688a0-c5d8-4d46-9b97-ccca24375f14/_layouts/15/Doc.aspx?sourcedoc=%7BEB5E2917-A691-40E9-8E8B-0A2CDCA5030C%7D&file=2020-FY-P7-Advisory%203%20Notebook&action=edit&mobileredirect=true&wdorigin=Sharepoint&RootFolder=%2Fsites%2FSection_df6688a0-c5d8-4d46-9b97-ccca24375f14%2FSiteAssets%2F2020-FY-P7-Advisory%203%20Notebook&web=1&ct=1617479094686&wdOrigin=OFFICECOM-WEB.START.MRU&cid=2bfb33b6-e868-42dc-9703-cd714cd75f18 ✔
-Look for the 'So, Preston D (Student)' tab
-Click on 'So, Preston D (Student) tab 
-Look for the 'Friday Check-in' button 
-Click on Friday Check-in button 
-Click on specific date coords
+Look for the 'So, Preston D (Student)' tab ✔
+Click on 'So, Preston D (Student) tab  ✔
+Look for the 'Friday Check-in' button  ✔
+Click on Friday Check-in button  ✔
+Click on specific date coords **In progress**
 click on specific coords within the page
 Presses keys 'CTRL+C'
 Driver.Close()
