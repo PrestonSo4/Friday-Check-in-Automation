@@ -1,3 +1,3 @@
 from datetime import date
-
-print(date.today())
+today = date.today()
+print(today)

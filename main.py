@@ -2,6 +2,7 @@ import selenium, pyautogui as p, time, keyboard, win32api, win32con
 from selenium import webdriver
 from datetime import date
 from getpass import getpass
+date = date.today()
 un = 's-sop' #Use this for ease of access. If you just want to run the code faster
 #un = input('Enter your username for synergy: ')
 pw = '' #Use this for ease of access. If you just want to run the code faster
@@ -69,7 +70,7 @@ time.sleep(10)
 clickImage('So_ Preston_D_(Student)_Tab.png', 0.7)
 clickImage('Friday_Check_in_Tab.png', 0.7)
 time.sleep(3)
-clickImage('2021-04-09.png', 0.98)
+clickImage(str(date)+'.png', 0.98)
 time.sleep(2)
 clickImage('Grade_Landmark.png', 0.98)
 p.move(-40, 40)
