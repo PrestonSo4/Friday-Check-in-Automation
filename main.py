@@ -60,8 +60,8 @@ def finalStage(file, con):
 def pickQuarter(quarter):
     from time import sleep
     sleep(0.5)
-    clickImage('Quarter_Button.png', 0.4)
-    clickImage(quarter+'.png',0.35)
+    clickImage('Quarter_Button.png', 0.98)
+    clickImage(quarter+'.png',0.98)
 
 driver = webdriver.Chrome()
 driver.maximize_window()
@@ -74,7 +74,7 @@ driver.find_element_by_xpath('//*[@id="ctl00_MainContent_Submit1"]').click()
 clickImage('Grade_Book_Button.png',0.7)
 zoom(2, '-')
 
-#pickQuarter(quarter)
+pickQuarter(quarter)
 while True:
     try:
         startX, startY = p.locateCenterOnScreen('Grades.png', confidence=0.98) #I'm using the locate image function so that the coords wont have to change depending on screensize
