@@ -1,3 +1,4 @@
-from datetime import date
-today = date.today()
-print(today)
+import pyautogui as p, time
+while True:
+    print(p.position())
+    time.sleep(2)
